@@ -39,6 +39,7 @@
 (defn accept-connection [server-socket selector]
   (let [channel (-> server-socket (.accept) (.getChannel))]
     (println "Connection from" channel)
+    (println "Connection from" (.. channel (socket) (getInetAddress) (getHostAddress)))
     (doto channel
       (.configureBlocking false)
       (.register selector SelectionKey/OP_READ))))
