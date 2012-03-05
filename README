@@ -1,0 +1,8 @@
+# clojure-nio
+
+Example of using Java NIO in Clojure using code from:
+http://pepijndevos.nl/2011/06/18/nio-in-clojure.html
+
+## Usage
+
+lein run
